@@ -1,0 +1,218 @@
+=== No arguments:
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Not enough arguments:
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Too many arguments:
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Radix out of range (1):
+cb: minimum base 2
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Radix out of range (2):
+cb: minimum base 2
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Radix out of range (3):
+cb: arguments must be 1 or 2 decimal digits
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Radix out of range (4):
+cb: arguments must be 1 or 2 decimal digits
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Negative radix (1):
+cb: arguments must be 1 or 2 decimal digits
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Negative radix (2):
+cb: arguments must be 1 or 2 decimal digits
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Non-decimal radix (1):
+cb: arguments must be 1 or 2 decimal digits
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== Non-decimal radix (2):
+cb: arguments must be 1 or 2 decimal digits
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+exit 1

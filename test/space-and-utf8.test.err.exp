@@ -1,0 +1,3 @@
+cb: input character outside ASCII range
+cb: input character outside ASCII range
+exit 1

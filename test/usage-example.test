@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Verify the example used in the Usage message.
+
+export PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+export DIGITS=
+
+# from README.md
+echo ff | cb 16 10          # 255
+echo 19 | cb 10 2           # 1011
+
+# from the Usage
+echo deadbeef | cb 16 10
+export DIGITS=0123456789cjzwfsbvxq
+echo 2021-12-25 | cb 10 20
+

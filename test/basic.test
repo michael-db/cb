@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# basic test with roundtrip
+
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+SEQ=$(mktemp --tmpdir $prefix.seq.XXX)
+ALT=$(mktemp --tmpdir $prefix.alt.XXX)
+OUT=$(mktemp --tmpdir $prefix.out.XXX)
+
+# 95*95=9025
+seq 0 9999 > $SEQ
+
+# use the default alphabet
+# export DIGITS='0123456789abcdefghij'
+export DIGITS=
+
+for BASE in 2 16 20; do
+    <$SEQ cb 10 $BASE > $ALT
+    <$ALT cb $BASE 10 > $OUT
+    if ! cmp $SEQ $OUT; then
+        >&2 echo "diff $SEQ $OUT"
+        exit 1
+    fi
+done
+
+echo "257 in binary:"
+echo 257 | cb 10 2
+echo "254 in hex:"
+echo 254 | cb 10 16
+echo "419 in base 20:"
+echo 419 | cb 10 20
+
+rm $SEQ $ALT $OUT
+

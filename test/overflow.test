@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+export DIGITS=0123456789cjzwfsbvxq  # base 20, DMA
+
+EIGHTY_DIGITS=12345678901234567890123456789012345678901234567890123456789012345678901234567890
+
+echo4080() { for i in `seq 1 51`; do echo -n $EIGHTY_DIGITS; done }
+
+echo1360() { for i in `seq 1 136`; do echo -n 1234567890; done }
+
+echo "maximum digits, no change of base (works)"
+(echo4080; echo 1234567890123456) | cb 10 10 | fold
+
+echo "maximum digits, not counting leading 0s (works)"
+(echo -n 0000000000; echo4080; echo 1234567890123456) | \
+    cb 10 20 | cb 20 10 | fold
+
+>&2 echo "maximum digits + 1, no change of base (overflow)"
+(echo4080; echo 12345678901234567) | cb 10 10
+
+# overflow occurs only if the output exceeds max digits;
+# test with an input exceeding that, but output within limit.
+echo "more than max digits input, but output less than max (works)"
+(echo4080; echo 12345678901234567890) | cb 10 20 | wc
+
+>&2 echo "input less than max, output exceeds max (overflow)"
+(echo4080; echo 12345678901234567890) | cb 10 20 | cb 20 10

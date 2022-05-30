@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+export DIGITS=0123456789abcdef
+
+# Space, tab.
+printf " 2024\t25 5\n" | cb 10 16
+
+# Non-ASCII (multibyte character) fails.
+printf "2024\u00b512\n200\n" | cb 10 16
+
+# ASCII 7f (DEL) fails.
+printf "2024\u007f\n" | cb 10 16

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+export DIGITS=DMA
+
+>&2 echo "=== No arguments:"
+cb
+>&2 echo "=== Not enough arguments:"
+cb 10
+>&2 echo "=== Too many arguments:"
+cb 10 2 5
+>&2 echo "=== Radix out of range (1):"
+cb 1 10
+>&2 echo "=== Radix out of range (2):"
+cb 10 0
+>&2 echo "=== Radix out of range (3):"
+cb 100 10
+>&2 echo "=== Radix out of range (4):"
+cb 10 100
+>&2 echo "=== Negative radix (1):"
+cb -2 10
+>&2 echo "=== Negative radix (2):"
+cb 10 -16
+>&2 echo "=== Non-decimal radix (1):"
+cb a 10
+>&2 echo "=== Non-decimal radix (2):"
+cb 10 A

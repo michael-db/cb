@@ -1,0 +1,5 @@
+maximum digits + 1, no change of base (overflow)
+cb: overflow
+input less than max, output exceeds max (overflow)
+cb: overflow
+exit 2

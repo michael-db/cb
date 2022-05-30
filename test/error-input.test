@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+export DIGITS='0123456789abcdefghij'
+
+# value not in DIGITS.
+echo k | cb 20 10
+
+# value in DIGITS but outside the range for the base.
+echo g | cb 16 10
+
+echo 1020 | cb 2 10

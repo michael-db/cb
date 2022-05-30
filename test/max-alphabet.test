@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# test maximum 95-character alphabet
+
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+SEQ=$(mktemp --tmpdir $prefix.seq.XXX)
+B95=$(mktemp --tmpdir $prefix.b95.XXX)
+OUT=$(mktemp --tmpdir $prefix.out.XXX)
+
+# 95*95=9025
+seq 0 9024 > $SEQ
+
+export DIGITS='0123456789 !"#$%&'"'"'()*+,-./:;<=>?@[\]^_`{|}~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+
+# roundtrip
+<$SEQ cb 10 95 > $B95
+<$B95 cb 95 10 > $OUT
+if ! cmp $SEQ $OUT; then
+    >&2 echo "diff $SEQ $OUT"
+    exit 1
+fi
+
+# sanity check: there should be no three-digit numbers
+>&2 <$B95 grep ...
+# and 95*95-1 should be zz
+echo 9024 | cb 10 95
+
+rm $SEQ $B95 $OUT
+

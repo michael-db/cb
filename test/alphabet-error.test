@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+PATH=$(dirname "$(readlink -f "$0")")/..:$PATH
+
+>&2 echo "=== alphabet contains repeated 'h'"
+echo | DIGITS=0123456789abcdefghhj cb 10 20
+
+>&2 echo "=== alphabet not printable ASCII (0x31 unit separator)"
+echo | DIGITS=$(printf "0123456789abcdefghi\x1f") cb 10 20
+
+>&2 echo "=== alphabet not printable ASCII (DEL)"
+echo | DIGITS=$(printf "0123456789\x7fbcdefghij") cb 10 20
+
+# This also tests the case where the illegal character is
+# beyond the range of used characters.
+>&2 echo "=== alphabet character not printable ASCII (multibyte)"
+echo | DIGITS=$(printf "0123456789abcdefghij\u00b5") cb 10 20
+
+>&2 echo "=== alphabet one character too short (A)"
+echo | DIGITS="0123456789abcdefghi" cb 20 10
+
+>&2 echo "=== alphabet one character too short (B)"
+echo | DIGITS="0123456789abcdefghi" cb 10 20
+
+>&2 echo "=== default alphabet one character too short"
+echo | DIGITS= cb 10 37

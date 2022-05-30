@@ -1,0 +1,155 @@
+=== alphabet contains repeated 'h'
+cb: digit repeated in $DIGITS
+DIGITS: 0123456789abcdefghhj
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== alphabet not printable ASCII (0x31 unit separator)
+cb: $DIGITS must be printable ASCII
+DIGITS: 0123456789abcdefghi
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== alphabet not printable ASCII (DEL)
+cb: $DIGITS must be printable ASCII
+DIGITS: 0123456789bcdefghij
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== alphabet character not printable ASCII (multibyte)
+cb: $DIGITS must be printable ASCII
+DIGITS: 0123456789abcdefghijµ
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== alphabet one character too short (A)
+cb: $DIGITS too short
+DIGITS: 0123456789abcdefghi
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== alphabet one character too short (B)
+cb: $DIGITS too short
+DIGITS: 0123456789abcdefghi
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+=== default alphabet one character too short
+cb: $DIGITS too short
+DIGITS: 0123456789abcdefghijklmnopqrstuvwxyz
+
+Usage: cb A B
+
+Read numbers in base A from stdin and output in base B.
+The alphabet used is the environment variable DIGITS.
+DIGITS must be printable ASCII and contain at least as
+many characters as A or B, whichever is greater.
+If DIGITS is not set, the default alphabet is
+0123456789abcdefghijklmnopqrstuvwxyz
+
+Examples:
+  # convert hexadecimal to decimal:
+  echo deadbeef | cb 16 10
+  # convert a date to vigesimal, custom alphabet:
+  export DIGITS=0123456789cjzwfsbvxq
+  echo 2021-12-25 | cb 10 20
+
+Author: Michael Breen (https://mbreen.com)
+Version: <redacted>
+exit 1

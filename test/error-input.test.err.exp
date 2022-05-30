@@ -1,0 +1,4 @@
+cb: input character 'k' not in alphabet
+cb: input character 'g' not in alphabet
+cb: input character '2' not in alphabet
+exit 1
