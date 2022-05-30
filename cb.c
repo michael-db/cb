@@ -8,7 +8,7 @@ static const char* program_name;
 // Usage message split on the program name.
 static const char* const usage[] = {
         "Usage: ", " A B\n\n"
-        "Read numbers in base A from stdin and output in base B.\n"
+        "Read whole numbers in base A and output in base B.\n"
         "The alphabet used is the environment variable DIGITS.\n"
         "DIGITS must be printable ASCII and contain at least as\n"
         "many characters as A or B, whichever is greater.\n"
@@ -20,6 +20,9 @@ static const char* const usage[] = {
         "  # convert a date to vigesimal, custom alphabet:\n"
         "  export DIGITS=0123456789cjzwfsbvxq\n"
         "  echo 2021-12-25 | ", " 10 20\n\n"
+        "Note: Only whole numbers are supported. Punctuation\n"
+        "characters not present in the alphabet are treated as\n"
+        "separators between numbers.\n\n"
         "Author: Michael Breen (https://mbreen.com)"
         // VERSION
         };

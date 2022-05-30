@@ -12,3 +12,7 @@ cb                          # get a usage message
 echo ff | cb 16 10          # 255
 echo 19 | cb 10 2           # 1011
 ```
+
+**Note**: only whole numbers are supported.
+A number containing a radix separator (decimal point '.' or comma ',')
+will be converted as two separate numbers.

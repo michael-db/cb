@@ -4,7 +4,7 @@ DIGITS: 0123456789abcdefghhj
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -17,6 +17,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
@@ -26,7 +30,7 @@ DIGITS: 0123456789abcdefghi
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -39,6 +43,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
@@ -48,7 +56,7 @@ DIGITS: 0123456789bcdefghij
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -61,6 +69,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
@@ -70,7 +82,7 @@ DIGITS: 0123456789abcdefghijµ
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -83,6 +95,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
@@ -92,7 +108,7 @@ DIGITS: 0123456789abcdefghi
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -105,6 +121,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
@@ -114,7 +134,7 @@ DIGITS: 0123456789abcdefghi
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -127,6 +147,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
@@ -136,7 +160,7 @@ DIGITS: 0123456789abcdefghijklmnopqrstuvwxyz
 
 Usage: cb A B
 
-Read numbers in base A from stdin and output in base B.
+Read whole numbers in base A and output in base B.
 The alphabet used is the environment variable DIGITS.
 DIGITS must be printable ASCII and contain at least as
 many characters as A or B, whichever is greater.
@@ -149,6 +173,10 @@ Examples:
   # convert a date to vigesimal, custom alphabet:
   export DIGITS=0123456789cjzwfsbvxq
   echo 2021-12-25 | cb 10 20
+
+Note: Only whole numbers are supported. Punctuation
+characters not present in the alphabet are treated as
+separators between numbers.
 
 Author: Michael Breen (https://mbreen.com)
 Version: <redacted>
